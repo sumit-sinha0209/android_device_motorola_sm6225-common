@@ -250,7 +250,8 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     TelephonyResProduct \
-    WifiResCommon
+    WifiResCommon \
+    WifiResTarget
 
 # Partitions
 PRODUCT_PACKAGES += \
