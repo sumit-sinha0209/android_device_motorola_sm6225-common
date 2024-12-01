@@ -172,6 +172,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
 
+# Init
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.mmi.boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.touch.sh \
+    init.oem.hw.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh \
+    init.mmi.charge_only.rc \
+    init.mmi.chipset.rc \
+    init.mmi.dalvik.rc \
+    init.mmi.debug.rc \
+    init.mmi.rc \
+    init.qcom.rc \
+    init.qcom.recovery.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -272,28 +294,6 @@ PRODUCT_COPY_FILES += \
 # RFS MSM MPSS symlinks
 PRODUCT_PACKAGES += \
     rfs_msm_mpss_readonly_vendor_fsg_symlink
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mmi.boot.sh \
-    init.mmi.laser.sh \
-    init.mmi.touch.sh \
-    init.oem.hw.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qti.dcvs.sh \
-    init.qti.early_init.sh \
-    init.mmi.charge_only.rc \
-    init.mmi.chipset.rc \
-    init.mmi.dalvik.rc \
-    init.mmi.debug.rc \
-    init.mmi.rc \
-    init.qcom.rc \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    ueventd.qcom.rc \
 
 # Sensors
 PRODUCT_PACKAGES += \
