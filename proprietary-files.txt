@@ -3,8 +3,6 @@
 # Current blobs with ELF checks disabled:
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
 # libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
-# libqti-perfd depends on libthermalclient, which is device specific
-# vendor.qti.hardware.camera.postproc@1.0-service-impl depends on libofflinelog, which is device specific
 
 # ADSP
 vendor/bin/adsprpcd
@@ -65,7 +63,8 @@ vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
 # Camera
 vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc:vendor/etc/init/android.hardware.camera.provider@2.4-service_64-qti.rc
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so;DISABLE_CHECKELF
+vendor/lib64/libofflinelog.so;DUMMY_SHARED_LIB
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -459,7 +458,7 @@ vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
 vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so;DISABLE_CHECKELF
+vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters.so
@@ -467,7 +466,7 @@ vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
 vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so;DISABLE_CHECKELF
+vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
 # Peripheral manager
@@ -717,6 +716,10 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Thermal
+vendor/lib/libthermalclient.so;DUMMY_SHARED_LIB
+vendor/lib64/libthermalclient.so;DUMMY_SHARED_LIB
 
 # Time services
 vendor/app/TimeService/TimeService.apk
