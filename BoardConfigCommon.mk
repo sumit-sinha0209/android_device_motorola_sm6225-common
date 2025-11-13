@@ -179,7 +179,18 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+
+ifneq (,$(AVB_CUSTOM_KEY_PATH))
+BOARD_AVB_ALGORITHM := $(AVB_CUSTOM_ALGORITHM)
+BOARD_AVB_KEY_PATH := $(AVB_CUSTOM_KEY_PATH)
+else
+AVB_CUSTOM_ALGORITHM := SHA256_RSA2048
+AVB_CUSTOM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+endif
+
+ifneq ($(WITH_AVB),true)
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+endif
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
