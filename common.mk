@@ -325,7 +325,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/motorola \
-    hardware/samsung \
     vendor/qcom/opensource/usb/etc
 
 # Telephony
